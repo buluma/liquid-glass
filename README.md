@@ -19,6 +19,7 @@ For an optimized build: `./scripts/build-app.sh release`. Open `Package.swift` i
 - **Playground**: regular/clear material, tint, interactive response, shape merging, and a movable backdrop. Hover and press the controls to compare responses. Shape separation below the container's spacing causes the glass shapes to merge.
 - **Settings**: persisted system/light/dark appearance, accent, backdrop, and menu bar tray visibility. Accessible from the sidebar, toolbar, tray, or ⌘,.
 - **Collapsible sidebar**: use the native toolbar sidebar button. ⌘1 and ⌘2 switch between the two sections.
+- **Frosted windows**: the main and Settings windows use a native translucent backdrop, with light/dark tints and lightly tinted content cards. macOS Reduce Transparency replaces the backdrop and card fills with solid surfaces.
 - **Menu bar tray**: the drop icon opens a panel with the two sections, Settings, and Quit. Closing the main window leaves the tray available.
 
 Glass is applied to controls, while content uses ordinary surfaces. SwiftUI handles the native material's accessibility behavior; the reveal animation also explicitly respects Reduce Motion.

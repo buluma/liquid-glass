@@ -137,7 +137,9 @@ struct FeatureNote: View {
             Text(title).font(.headline)
             Text(text).font(.subheadline).foregroundStyle(.secondary)
         }
+        .padding(20)
         .frame(maxWidth: .infinity, alignment: .leading)
+        .contentSurface()
     }
 }
 
@@ -204,6 +206,7 @@ struct PlaygroundView: View {
                     }
                 }
                 .formStyle(.grouped)
+                .scrollContentBackground(.hidden)
                 .scrollDisabled(true)
                 .frame(height: 330)
             }
@@ -238,6 +241,7 @@ struct PreferencesView: View {
                 }
             }
             .formStyle(.grouped)
+            .scrollContentBackground(.hidden)
             .scrollDisabled(true)
             .frame(height: 290)
             Label("Respects macOS Reduce Motion and Reduce Transparency settings.", systemImage: "accessibility")

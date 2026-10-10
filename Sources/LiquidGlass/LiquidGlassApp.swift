@@ -59,6 +59,7 @@ struct LiquidGlassApp: App {
     var body: some Scene {
         Window("Liquid Glass", id: "main") {
             ContentView(model: model)
+                .modifier(FrostedWindowBackground())
                 .tint(model.accent.color)
                 .preferredColorScheme(model.colorScheme)
         }
@@ -77,6 +78,7 @@ struct LiquidGlassApp: App {
             PreferencesView(model: model)
                 .padding(28)
                 .frame(width: 480)
+                .modifier(FrostedWindowBackground())
                 .tint(model.accent.color)
                 .preferredColorScheme(model.colorScheme)
         }
@@ -106,6 +108,7 @@ struct ContentView: View {
                     Label("Settings", systemImage: "gearshape").tag(Page.settings)
                 }
             }
+            .scrollContentBackground(.hidden)
             .navigationSplitViewColumnWidth(min: 180, ideal: 210, max: 260)
             .safeAreaInset(edge: .bottom) {
                 HStack(spacing: 8) {
